@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cnb_unselectedColor="#F4511E"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:id="@+id/nav_add_review"
+        android:icon="@drawable/ic_add_review"
+        app:cnb_backgroundColor="#202f65"
+        app:cnb_iconColor="#F4511E"
+        app:cnb_textColor="#F4511E"
+        android:title="Add A Review" />
+
+    <item
+        android:id="@+id/nav_view_review"
+        android:icon="@drawable/ic_view_review"
+        app:cnb_backgroundColor="#202f65"
+        app:cnb_iconColor="#F4511E"
+        app:cnb_textColor="#F4511E"
+        android:title="See Reviews" />
+
+    <item
+        android:id="@+id/nav_sos"
+        android:icon="@drawable/ic_sos"
+        app:cnb_backgroundColor="#202f65"
+        app:cnb_iconColor="#F4511E"
+        app:cnb_textColor="#F4511E"
+        android:title="Send SOS" />
+
+
+
+
+</menu>
