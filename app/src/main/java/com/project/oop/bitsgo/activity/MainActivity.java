@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FragmentManager fragmentManager;
     private NavigationView navigationView;
 
+
+    //Change by Kushal.
+    public void nothingSelected(){
+        this.bottomNavigationView.setItemSelected(R.id.nav_home,true);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +50,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
 
         drawer = findViewById(R.id.drawer_layout);
@@ -91,14 +95,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     selectedFragment=new SOSFragment();
                     break;
 
-
             }
-
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
-
         }
     };
+
+
 
 
     @Override
