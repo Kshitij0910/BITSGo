@@ -13,12 +13,15 @@ import androidx.navigation.NavController;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.project.oop.bitsgo.R;
 import com.project.oop.bitsgo.fragment.AccountFragment;
@@ -36,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ChipNavigationBar bottomNavigationView;
     private FragmentManager fragmentManager;
     private NavigationView navigationView;
-
 
     //Change by Kushal.
     public void nothingSelected(){
@@ -120,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_logout:
                 Toast.makeText(this, "User Logging out!", Toast.LENGTH_SHORT).show();
-                //logout();
+                logout();
                 break;
 
 
@@ -131,6 +133,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+    }
 
 
     @Override
