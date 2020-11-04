@@ -44,8 +44,9 @@ public class AddReviewFragment extends Fragment implements OnMapReadyCallback {
     LocationListener locationListener;
     LatLng userCurrentLocationLatLng;
     Button useCurrentLocation;
+
     public AddReviewFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -93,7 +94,9 @@ public class AddReviewFragment extends Fragment implements OnMapReadyCallback {
             @Override
             public void onLocationChanged(Location location) {
                 mMap.clear();
+
                 // re add all other required markers;
+
                 LatLng currentLocation=new LatLng(location.getLatitude(),location.getLongitude());
                 userCurrentLocationLatLng=currentLocation;
                 mMap.addMarker(new MarkerOptions().position(currentLocation)

@@ -68,19 +68,6 @@
             app:layout_constraintTop_toBottomOf="@+id/review" />
 
         <EditText
-            android:id="@+id/travelDetails"
-            android:layout_width="323dp"
-            android:layout_height="127dp"
-            android:layout_marginStart="42dp"
-            android:layout_marginLeft="42dp"
-            android:layout_marginTop="3dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-        <EditText
             android:id="@+id/rating"
             android:layout_width="154dp"
             android:layout_height="42dp"
@@ -126,5 +113,17 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <EditText
+            android:id="@+id/travelDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:hint="Travel rating out of 10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -22,6 +22,7 @@ import com.project.oop.bitsgo.R;
 import com.project.oop.bitsgo.activity.MainActivity;
 
 import java.lang.reflect.Type;
+import java.sql.Time;
 
 public class WriteReview extends Fragment {
 
@@ -34,7 +35,7 @@ public class WriteReview extends Fragment {
 
 
     public WriteReview() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -85,18 +86,28 @@ public class WriteReview extends Fragment {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     if(typeText.getText().toString().matches("beach")){
-                                        Beach newBeach=new Beach(latLng,name.getText().toString(),review.getText().toString(),travelDetails.getText().toString(),Integer.parseInt(rating.getText().toString()));
-                                        /*
-                                        Now add this to the database.
-                                         */
+                                        Beach newBeach=new Beach(latLng,name.getText().toString(),review.getText().toString(),Integer.parseInt(travelDetails.getText().toString()),Integer.parseInt(rating.getText().toString()),0,0,0,0);
+                                        /* For now just keeping additional properties ==0, later if needed will create separate fragment or something*/
 
-                                    }else if(typeText.getText().toString().matches("rest")){
-                                        Restaurant newRest=new Restaurant(latLng,name.getText().toString(),review.getText().toString(),travelDetails.getText().toString(),Integer.parseInt(rating.getText().toString()),"");
-                                        //Leaving cuisine unmarked for now.
                                         /*
-                                        addToDatabase();
-                                         */
+                                            Add this beach to database.
+                                        */
+                                    }else if(typeText.getText().toString().matches("restaurant")){
+                                        Restaurant newRest=new Restaurant(latLng,name.getText().toString(),review.getText().toString(),Integer.parseInt(travelDetails.getText().toString()),Integer.parseInt(rating.getText().toString()),"PlaceHolder",0,0,0,new Time(0,0,0),new Time(0,0,0));
+                                        /* For now just keeping additional properties ==0, later if needed will create separate fragment or something*/
+
+                                        /*
+                                            Add this restaurant to database.
+                                        */
+                                    }else if(typeText.getText().toString().matches("adventure")){
+                                        Adventure newAdv=new Adventure(latLng,name.getText().toString(),review.getText().toString(),Integer.parseInt(travelDetails.getText().toString()),Integer.parseInt(rating.getText().toString()),0,0,0,new Time(0,0,0));
+                                        /* For now just keeping additional properties ==0, later if needed will create separate fragment or something*/
+
+                                        /*
+                                            Add this restaurant to database.
+                                        */
                                     }
+
                                     Toast.makeText(getContext(), "Review added!", Toast.LENGTH_SHORT).show();
                                     FragmentManager fragmentManager=getParentFragmentManager();
                                     fragmentManager.beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
