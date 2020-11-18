@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "980948014601",
+    "firebase_url": "https://bitsgo-2dc41.firebaseio.com",
+    "project_id": "bitsgo-2dc41",
+    "storage_bucket": "bitsgo-2dc41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980948014601:android:740bbda289b0249d0fcad8",
+        "android_client_info": {
+          "package_name": "com.project.oop.bitsgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980948014601-j85ccamnoc40psn3e648b6bcr22fff6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.oop.bitsgo",
+            "certificate_hash": "630de053bd45aa8f08b8d8642cac92445c641eec"
+          }
+        },
+        {
+          "client_id": "980948014601-pkmn1d8iug3b5k0118lfv7bjc712v14g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK-HL-gm8Ah4odq67SqmU--sb8MnWEcPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980948014601-pkmn1d8iug3b5k0118lfv7bjc712v14g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
